@@ -34,7 +34,7 @@ const GoalForm = ({ addGoal }) => {
           value={formData.by}
           onChange={handleChange}
         />
-        <<button type="submit">Add</button>
+        <button type="submit">Add</button>
       </form>
     </>
   );
