@@ -1,9 +1,9 @@
 import React from "react";
 
-const ListOfGoals = ({ allGoals }) => {
+const ListOfGoals = ({ goals }) => {
   return (
     <ul>
-      {allGoals.map((goal, index) => (
+      {goals.map((goal, index) => (
         <li key={index}>
           <p>
             My goal is to {goal.goal}, by {goal.by}.
