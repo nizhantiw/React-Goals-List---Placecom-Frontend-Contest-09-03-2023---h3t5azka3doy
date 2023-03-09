@@ -3,20 +3,17 @@ import React, { useState } from "react";
 const GoalForm = ({ addGoal }) => {
   const [formData, setFormData] = useState({
     goal: "",
-    by: ""
+    by: "",
   });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addGoal(formData);
-    setFormData({
-      goal: "",
-      by: ""
-    });
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ goal: "", by: "" });
   };
 
   return (
@@ -37,7 +34,7 @@ const GoalForm = ({ addGoal }) => {
           value={formData.by}
           onChange={handleChange}
         />
-        <button>Add</button>
+        <<button type="submit">Add</button>
       </form>
     </>
   );
